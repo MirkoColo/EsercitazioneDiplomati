@@ -78,7 +78,7 @@ namespace EsercitazioneDiplomati
             int voto = 0;
             int counter = 0;
             Diplomati[] diplomati = new Diplomati[100];
-            for (int i = 0; i < 2; i++)
+            for (int i = 0; i < 5; i++)
             {
                 Diplomati dip = new Diplomati();
                 Console.WriteLine("Inserire il Nome: ");
@@ -89,8 +89,9 @@ namespace EsercitazioneDiplomati
                 {
                     Console.WriteLine("Inserire il Voto: ");
                     voto = int.Parse(Console.ReadLine());
+                    dip.SetVoto(voto);
                 } while (voto < 36 || voto > 100);
-                dip.SetVoto(voto);                          
+                                         
                 diplomati[i] = dip;
                 counter++;
 
